@@ -1,0 +1,155 @@
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+:root {
+	--primary-color: #080710s;
+	--accent-color: #f50057;
+
+	--text-color: #263238;
+	--body-color: #080710;
+	--main-font: 'roboto';
+	--font-bold: 700;
+	--font-regular: 400;
+}
+* { box-sizing: border-box }
+
+body {
+	color: var(--text-color);
+	background-color: var(--body-color);
+	font-family: var(--main-font), Arial;
+	font-weight: var(--font-regular);
+}
+main{ 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+h1 { font-weight: var(--font-bold) }
+input, 
+button {
+	border: none;
+	background: none;
+	outline: 0;
+}
+button {cursor: pointer}
+.SearchBox-input::placeholder {
+ color:white;
+	opacity: .6;
+}
+.SearchBox-input::-webkit-input-placeholder {
+  color: white;
+}
+.SearchBox-input::-moz-placeholder {
+  color: white;
+}
+.SearchBox-input:-ms-input-placeholder {
+  color: white;
+}
+#formGroupExampleInput:-moz-placeholder {
+  color: white;
+}
+
+
+
+.SearchBox {
+	--height: 4em;
+	display: flex;
+	
+	border-radius: var(--height);
+	background-color: var(--primary-color);
+	height: var(--height);
+}
+	.SearchBox:hover .SearchBox-input {
+		padding-left: 2em;
+		padding-right: 1em;
+		width: 240px;
+	}
+	.SearchBox-input {
+		width: 0;
+		font-size: 1.2em;
+		color: #fff;
+		transition: .45s;
+	}
+	.SearchBox-button {
+		display: flex;
+		border-radius: 50%;
+		width: var(--height);
+		height: var(--height);
+		background-color: var(--accent-color);
+		transition: .3s;
+	}
+	.SearchBox-button:active  {
+		transform: scale(.85);
+	}
+	.SearchBox-icon {
+		margin: auto;
+		color: #fff;
+	}
+
+
+@media screen and (min-width: 400px){
+	.SearchBox:hover .SearchBox-input {
+		width: 500px;
+	}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #080710;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #080710;
+}
+
+.active {
+  background-color: #f50057;
+}
+</style>
+</head>
+
+
+
+<body>
+    <h1 style="color: #e5e5e5; display: flex; justify-content: space-around;  width:100%">FAKE APP DETECTOR</h1>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">Feedback</a></li>
+        <li><a href="#contact">Profile</a></li>
+        <li><a href="#about">Help</a></li>
+      </ul>
+<main>
+	<h1 style="color: white;">Search the app here</h1>
+	
+	<div class="SearchBox">
+		<input type="text" class="SearchBox-input" placeholder="Paste the link of app from google play">
+	
+			<a role="button" class="SearchBox-button" href="result.html">
+				<i class="SearchBox-icon  material-icons">search</i>
+            </a>
+		
+	</div>
+	
+</main>
+</body>
+</html>
